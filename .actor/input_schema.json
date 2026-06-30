@@ -1,0 +1,61 @@
+{
+    "title": "PropertyFinder Scraper Config",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "url": {
+            "title": "Target URL",
+            "type": "string",
+            "description": "A PropertyFinder URL — either a single property page (e.g. .../apartment-for-sale/...-12345678.html) or a search/listing page (e.g. /en/search?...). The scraper auto-detects which mode to run. If left empty, the actor falls back to a default UAE search URL.",
+            "editor": "textfield",
+            "prefill": "https://www.propertyfinder.ae/en/search?c=1&fu=0&l=1&ob=mr"
+        },
+        "startPage": {
+            "title": "Start Page",
+            "type": "integer",
+            "description": "Pagination start page (only used for search URLs, ignored for single property URLs).",
+            "default": 1,
+            "prefill": 1
+        },
+        "endPage": {
+            "title": "End Page",
+            "type": "integer",
+            "description": "Pagination end page (only used for search URLs, ignored for single property URLs).",
+            "default": 1,
+            "prefill": 1
+        },
+        "maxResults": {
+            "title": "Max Results",
+            "type": "integer",
+            "description": "Maximum number of property listings to scrape. Only applies to search URLs — single property URLs always return exactly one result regardless of this value. Default: 5.",
+            "default": 5,
+            "prefill": 5
+        },
+        "proxy": {
+            "title": "Proxy Configuration",
+            "type": "object",
+            "description": "Optional. Leave off / disabled to run without a proxy. Turn on Apify Proxy (UAE suggested) or provide a custom proxy string only if you need one — residential proxies help avoid DataDome blocks on large-scale runs.",
+            "editor": "proxy",
+            "default": {
+                "useApifyProxy": false
+            },
+            "prefill": {
+                "useApifyProxy": true,
+                "apifyProxyCountry": "AE"
+            }
+        },
+        "saveToMongo": {
+            "title": "Export to MongoDB",
+            "type": "boolean",
+            "description": "Toggle real-time saving (upsert) to a MongoDB database.",
+            "default": false
+        },
+        "mongoUri": {
+            "title": "MongoDB URI",
+            "type": "string",
+            "description": "MongoDB connection string. Required only when 'Export to MongoDB' is enabled.",
+            "editor": "textfield",
+            "isSecret": true
+        }
+    }
+}
