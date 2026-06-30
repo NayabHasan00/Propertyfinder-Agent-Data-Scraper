@@ -1,0 +1,4 @@
+apify>=1.6.0
+playwright>=1.41.0
+pydantic>=2.6.0
+pymongo>=4.6.0
