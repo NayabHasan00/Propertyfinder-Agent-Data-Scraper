@@ -1,6 +1,6 @@
 {
     "actorSpecification": 1,
-    "name": "propertyfinder-scraper",
+    "name": "propertyfinder-agent-scraper",
     "title": "PropertyFinder Cloud Scraper",
     "description": "Headless production scraper for extracting PropertyFinder.ae real estate listings.",
     "version": "1.1",
