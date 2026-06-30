@@ -40,7 +40,7 @@
                 "useApifyProxy": false
             },
             "prefill": {
-                "useApifyProxy": true,
+                "useApifyProxy": false,
                 "apifyProxyCountry": "AE"
             }
         },
