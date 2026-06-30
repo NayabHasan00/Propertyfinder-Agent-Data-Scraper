@@ -1,0 +1,14 @@
+{
+    "actorSpecification": 1,
+    "title": "PropertyFinder Listings Dataset",
+    "type": "object",
+    "properties": {
+        "listing_id": { "type": "string" },
+        "price": { "type": "number" },
+        "currency": { "type": "string" },
+        "location": { "type": "object" },
+        "property_details": { "type": "object" },
+        "agent": { "type": "object" },
+        "url": { "type": "string" }
+    }
+}
