@@ -39,10 +39,6 @@
             "default": {
                 "useApifyProxy": false
             },
-            "prefill": {
-                "useApifyProxy": false,
-                "apifyProxyCountry": "AE"
-            }
         },
         "saveToMongo": {
             "title": "Export to MongoDB",
