@@ -121,6 +121,10 @@ async def main():
                 # Agent profile picture URL is not included in the output.
                 if "agent" in listing_data:
                     listing_data["agent"].pop("image", None)
+                    
+                    # Force Excel CSV import to treat the phone number as text
+                    if listing_data["agent"].get("phone") and listing_data["agent"]["phone"] != "N/A":
+                        listing_data["agent"]["phone"] = f'="{listing_data["agent"]["phone"]}"'
 
                 agent       = listing_data.get("agent", {})
                 agent_name  = agent.get("name", "N/A")
